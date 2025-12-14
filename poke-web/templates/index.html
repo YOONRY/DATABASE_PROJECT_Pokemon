@@ -3,9 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>포켓몬 출현 정보</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+
+<header>
   <h1>포켓몬 출현 정보</h1>
-  <p>Flask 템플릿 정상 로드됨 ✅</p>
+</header>
+
+<section class="search">
+  <input
+    type="text"
+    id="pokemonSearch"
+    placeholder="포켓몬 이름으로 지역 검색 (예: 피카츄)"
+  >
+  <ul id="searchResult"></ul>
+</section>
+
+<main class="layout">
+  <aside class="locations">
+    <h2>지역 목록</h2>
+    <ul id="locationList"></ul>
+  </aside>
+
+  <section class="results">
+    <h2 id="resultTitle">지역을 선택하세요</h2>
+    <ul id="result"></ul>
+  </section>
+</main>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>
