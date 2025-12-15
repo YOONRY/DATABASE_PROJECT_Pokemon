@@ -136,15 +136,15 @@
 ```
 poke-web/
 │
-├─ app.py
+├─ app.py https://github.com/YOONRY/DATABASE_PROJECT_Pokemon/blob/main/poke-web/app.py
 ├─ pokemon.db
 │
 ├─ templates/
-│   └─ index.html
+│   └─ index.html https://github.com/YOONRY/DATABASE_PROJECT_Pokemon/blob/main/poke-web/templates/index.html
 │
 ├─ static/
-│   ├─ style.css
-│   ├─ app.js
+│   ├─ style.css https://github.com/YOONRY/DATABASE_PROJECT_Pokemon/blob/main/poke-web/static/style.css
+│   ├─ app.js https://github.com/YOONRY/DATABASE_PROJECT_Pokemon/blob/main/poke-web/static/app.js
 │   └─ images/
 │       ├─ locations/
 │       └─ pokemon/
