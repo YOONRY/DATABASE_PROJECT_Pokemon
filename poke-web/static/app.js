@@ -2,6 +2,7 @@
 // 전역 상태
 // =====================================
 let activeType = null;
+let activeLocationId = null;
 
 // =====================================
 // 다크모드
@@ -36,12 +37,34 @@ async function loadLocations() {
     li.classList.add("location-item");
 
     li.addEventListener("click", () => {
-      document.querySelectorAll(".location-item")
-        .forEach(el => el.classList.remove("active"));
+  // 이미 선택된 지역을 다시 클릭 → 취소
+  if (activeLocationId === loc.Lid) {
+    activeLocationId = null;
 
-      li.classList.add("active");
-      loadEncounters(loc.Lid, loc.Lname);
-    });
+    li.classList.remove("active");
+
+    // 결과 초기화
+    document.getElementById("resultTitle").textContent =
+      "지역을 선택하세요";
+    document.getElementById("result").innerHTML = "";
+
+    const img = document.getElementById("locationImg");
+    img.src = "";
+    img.alt = "";
+
+    return;
+  }
+
+  // 새로운 지역 선택
+  activeLocationId = loc.Lid;
+
+  document.querySelectorAll(".location-item")
+    .forEach(el => el.classList.remove("active"));
+
+  li.classList.add("active");
+  loadEncounters(loc.Lid, loc.Lname);
+});
+
 
     ul.appendChild(li);
   });
