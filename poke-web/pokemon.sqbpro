@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="pokemon.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1721"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="encounter" custom_title="0" dock_id="2" table="4,9:mainencounter"/><dock_state state="000000ff00000000fd000000010000000200000827000004fafc0100000002fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000000008270000016300ffffff000008270000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Location" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="28"/><column index="2" value="107"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Pokemon" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="0" mode="0"/></sort><column_widths><column index="1" value="31"/><column index="2" value="87"/><column index="3" value="71"/><column index="4" value="71"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="encounter" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="1" mode="1"/></sort><column_widths><column index="1" value="60"/><column index="2" value="87"/><column index="3" value="82"/><column index="4" value="70"/><column index="5" value="74"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">---- 1. Pokémon 정보
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="pokemon.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1721"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="evolution" custom_title="0" dock_id="2" table="4,9:mainevolution"/><dock_state state="000000ff00000000fd000000010000000200000827000004fafc0100000002fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000000008270000015d00ffffff000008270000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Location" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="28"/><column index="2" value="107"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Pokemon" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="0" mode="0"/></sort><column_widths><column index="1" value="31"/><column index="2" value="87"/><column index="3" value="71"/><column index="4" value="71"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="encounter" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="1" mode="1"/></sort><column_widths><column index="1" value="60"/><column index="2" value="87"/><column index="3" value="82"/><column index="4" value="70"/><column index="5" value="74"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="evolution" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="29"/><column index="2" value="123"/><column index="3" value="107"/><column index="4" value="111"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">---- 1. Pokémon 정보
 -- CREATE TABLE Pokemon (
 --     Pid INTEGER PRIMARY KEY,
 --     Pname TEXT NOT NULL,
@@ -2136,10 +2136,160 @@
 -- 뮤츠 Lv70 (특별 출현)
 -- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
 -- VALUES (398, 150, 10, 70, 70);
-</sql><sql name="SQL 9*">-- DELETE FROM encounter
--- WHERE Eid NOT IN (
---   SELECT MIN(Eid)
---   FROM encounter
---   GROUP BY location_id, pokemon_id
+</sql><sql name="SQL 9">-- DELETE FROM encounter
+-- WHERE Eid NOT IN (
+--   SELECT MIN(Eid)
+--   FROM encounter
+--   GROUP BY location_id, pokemon_id
+-- );
+</sql><sql name="SQL 10">-- CREATE TABLE evolution (
+--     Vid INTEGER PRIMARY KEY,
+--     from_pokemon_id INTEGER NOT NULL,
+--     to_pokemon_id INTEGER NOT NULL,
+--     condition TEXT,
+--     FOREIGN KEY (from_pokemon_id) REFERENCES pokemon(Pid),
+--     FOREIGN KEY (to_pokemon_id) REFERENCES pokemon(Pid)
 -- );
-</sql><current_tab id="8"/></tab_sql></sqlb_project>
+
+-- 이상해씨 → 이상해풀 (Lv16)
+-- INSERT INTO evolution VALUES (1, 1, 2, 'Lv16');
+-- 
+-- -- 이상해풀 → 이상해꽃 (Lv32)
+-- INSERT INTO evolution VALUES (2, 2, 3, 'Lv32');
+-- 
+-- -- 파이리 → 리자드 (Lv16)
+-- INSERT INTO evolution VALUES (3, 4, 5, 'Lv16');
+-- 
+-- -- 리자드 → 리자몽 (Lv36)
+-- INSERT INTO evolution VALUES (4, 5, 6, 'Lv36');
+-- 
+-- -- 꼬부기 → 어니부기 (Lv16)
+-- INSERT INTO evolution VALUES (5, 7, 8, 'Lv16');
+-- 
+-- -- 어니부기 → 거북왕 (Lv36)
+-- INSERT INTO evolution VALUES (6, 8, 9, 'Lv36');
+-- 
+-- -- 캐터피 → 단데기 (Lv7)
+-- INSERT INTO evolution VALUES (7, 10, 11, 'Lv7');
+-- 
+-- -- 단데기 → 버터플 (Lv10)
+-- INSERT INTO evolution VALUES (8, 11, 12, 'Lv10');
+-- 
+-- -- 뿔충이 → 딱충이 (Lv7)
+-- INSERT INTO evolution VALUES (9, 13, 14, 'Lv7');
+-- 
+-- -- 딱충이 → 독침붕 (Lv10)
+-- INSERT INTO evolution VALUES (10, 14, 15, 'Lv10');
+-- 
+-- -- 파라스 → 파라섹트 (Lv24)
+-- INSERT INTO evolution VALUES (11, 46, 47, 'Lv24');
+-- 
+-- -- 콘팡 → 도나리 (Lv31)
+-- INSERT INTO evolution VALUES (12, 48, 49, 'Lv31');
+-- 
+-- -- 구구 → 피죤 (Lv18)
+-- INSERT INTO evolution VALUES (13, 16, 17, 'Lv18');
+-- 
+-- -- 피죤 → 피죤투 (Lv36)
+-- INSERT INTO evolution VALUES (14, 17, 18, 'Lv36');
+-- 
+-- -- 깨비참 → 깨비드릴조 (Lv20)
+-- INSERT INTO evolution VALUES (15, 21, 22, 'Lv20');
+-- 
+-- -- 꼬렛 → 레트라 (Lv20)
+-- INSERT INTO evolution VALUES (16, 19, 20, 'Lv20');
+-- 
+-- -- 피카츄 → 라이츄 (천둥의돌)
+-- INSERT INTO evolution VALUES (17, 25, 26, 'Thunder Stone');
+-- 
+-- -- 모래두지 → 고지 (Lv22)
+-- INSERT INTO evolution VALUES (18, 27, 28, 'Lv22');
+-- 
+-- -- 니드런♀ → 니드리나 (Lv16)
+-- INSERT INTO evolution VALUES (19, 29, 30, 'Lv16');
+-- 
+-- -- 니드리나 → 니드퀸 (달의돌)
+-- INSERT INTO evolution VALUES (20, 30, 31, 'Moon Stone');
+-- 
+-- -- 니드런♂ → 니드리노 (Lv16)
+-- INSERT INTO evolution VALUES (21, 32, 33, 'Lv16');
+-- 
+-- -- 니드리노 → 니드킹 (달의돌)
+-- INSERT INTO evolution VALUES (22, 33, 34, 'Moon Stone');
+-- 
+-- -- 삐삐 → 픽시 (달의돌)
+-- INSERT INTO evolution VALUES (23, 35, 36, 'Moon Stone');
+-- 
+-- -- 식스테일 → 나인테일 (불꽃의돌)
+-- INSERT INTO evolution VALUES (24, 37, 38, 'Fire Stone');
+-- 
+-- -- 푸린 → 푸크린 (달의돌)
+-- INSERT INTO evolution VALUES (25, 39, 40, 'Moon Stone');
+-- 
+-- -- 뚜벅쵸 → 냄새꼬 (Lv21)
+-- INSERT INTO evolution VALUES (26, 43, 44, 'Lv21');
+-- 
+-- -- 냄새꼬 → 라플레시아 (리프의돌)
+-- INSERT INTO evolution VALUES (27, 44, 45, 'Leaf Stone');
+-- 
+-- -- 주뱃 → 골뱃 (Lv22)
+-- INSERT INTO evolution VALUES (28, 41, 42, 'Lv22');
+-- 
+-- -- 디그다 → 닥트리오 (Lv26)
+-- INSERT INTO evolution VALUES (29, 50, 51, 'Lv26');
+-- 
+-- -- 나옹 → 페르시온 (Lv28)
+-- INSERT INTO evolution VALUES (30, 52, 53, 'Lv28');
+-- 
+-- -- 망키 → 성원숭 (Lv28)
+-- INSERT INTO evolution VALUES (31, 56, 57, 'Lv28');
+-- 
+-- -- 고라파덕 → 골덕 (Lv33)
+-- INSERT INTO evolution VALUES (32, 54, 55, 'Lv33');
+-- 
+-- -- 발챙이 → 슈륙챙이 (Lv25)
+-- INSERT INTO evolution VALUES (33, 60, 61, 'Lv25');
+-- 
+-- -- 슈륙챙이 → 강챙이 (물의돌)
+-- INSERT INTO evolution VALUES (34, 61, 62, 'Water Stone');
+-- 
+-- -- 알통몬 → 근육몬 (Lv28)
+-- INSERT INTO evolution VALUES (35, 66, 67, 'Lv28');
+-- 
+-- -- 근육몬 → 괴력몬 (Lv36)
+-- INSERT INTO evolution VALUES (36, 67, 68, 'Lv36');
+-- 
+-- -- 꼬마돌 → 데구리 (Lv25)
+-- INSERT INTO evolution VALUES (37, 74, 75, 'Lv25');
+-- 
+-- -- 데구리 → 딱구리 (교환)
+-- INSERT INTO evolution VALUES (38, 75, 76, 'Trade');
+-- 
+-- -- 포니타 → 날쌩마 (Lv40)
+-- INSERT INTO evolution VALUES (39, 77, 78, 'Lv40');
+-- 
+-- -- 고오스 → 고우스트 (Lv25)
+-- INSERT INTO evolution VALUES (40, 92, 93, 'Lv25');
+-- 
+-- -- 고우스트 → 팬텀 (교환)
+-- INSERT INTO evolution VALUES (41, 93, 94, 'Trade');
+-- 
+-- -- 코일 → 레어코일 (Lv30)
+-- INSERT INTO evolution VALUES (42, 81, 82, 'Lv30');
+-- 
+-- -- 미뇽 → 신뇽 (Lv30)
+-- INSERT INTO evolution VALUES (43, 147, 148, 'Lv30');
+-- 
+-- -- 신뇽 → 망나뇽 (Lv55)
+-- INSERT INTO evolution VALUES (44, 148, 149, 'Lv55');
+-- 
+-- 
+-- -- 이브이 → 샤미드 (물의돌)
+-- INSERT INTO evolution VALUES (45, 133, 134, 'Water Stone');
+-- 
+-- -- 이브이 → 쥬피썬더 (천둥의돌)
+-- INSERT INTO evolution VALUES (46, 133, 135, 'Thunder Stone');
+-- 
+-- -- 이브이 → 부스터 (불꽃의돌)
+-- INSERT INTO evolution VALUES (47, 133, 136, 'Fire Stone');
+</sql><current_tab id="9"/></tab_sql></sqlb_project>

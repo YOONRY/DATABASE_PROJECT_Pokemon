@@ -12,6 +12,9 @@
   <button id="themeToggle">🌙 다크모드</button>
 </header>
 
+<!-- =========================
+     포켓몬 이름 검색
+========================= -->
 <section class="search">
   <input
     type="text"
@@ -21,6 +24,9 @@
   <ul id="searchResult"></ul>
 </section>
 
+<!-- =========================
+     타입 필터 (접기/펼치기)
+========================= -->
 <section class="types">
   <h2>
     타입 필터
@@ -31,27 +37,50 @@
   </div>
 </section>
 
+<!-- =========================
+     메인 레이아웃
+========================= -->
 <main class="layout">
+
+  <!-- 지역 목록 -->
   <aside class="locations">
     <h2>지역 목록</h2>
     <ul id="locationList"></ul>
   </aside>
 
+  <!-- 결과 영역 -->
   <section class="results">
+
+    <!-- 지역 이미지 -->
     <div class="location-image">
       <img id="locationImg" src="" alt="">
     </div>
 
+    <!-- 지역별 포켓몬 -->
     <h2 id="resultTitle">지역을 선택하세요</h2>
     <ul id="result"></ul>
 
+    <!-- 타입 → 포켓몬 -->
     <h2 id="typeTitle"></h2>
     <ul id="typePokemonList"></ul>
 
+    <!-- 포켓몬 → 지역 -->
     <h2 id="pokemonLocationTitle"></h2>
     <ul id="pokemonLocationList"></ul>
+
   </section>
 </main>
+
+<!-- =========================
+     진화 트리 모달 (⭐ 핵심 변경)
+========================= -->
+<div id="evoModal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeEvoModal" class="close">&times;</span>
+    <h3 id="evoTitle"></h3>
+    <ul id="evoList" class="evo-list"></ul>
+  </div>
+</div>
 
 <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>

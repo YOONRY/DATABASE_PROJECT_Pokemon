@@ -157,6 +157,28 @@ def pokemon_autocomplete():
 
     return jsonify([dict(r) for r in rows])
 
+@app.route("/api/pokemon/<int:pid>/evolution")
+def pokemon_evolution(pid):
+    db = get_db()
+
+    rows = db.execute("""
+        SELECT
+            e.from_pokemon_id AS from_pid,
+            f.Pname AS from_name,
+            e.to_pokemon_id AS to_pid,
+            t.Pname AS to_name,
+            e.condition
+        FROM evolution e
+        JOIN pokemon f ON f.Pid = e.from_pokemon_id
+        JOIN pokemon t ON t.Pid = e.to_pokemon_id
+        WHERE e.from_pokemon_id = ?
+           OR e.to_pokemon_id = ?
+        ORDER BY e.Vid
+    """, (pid, pid)).fetchall()
+
+    db.close()
+    return jsonify([dict(r) for r in rows])
+
 
 if __name__ == "__main__":
     app.run(debug=True)

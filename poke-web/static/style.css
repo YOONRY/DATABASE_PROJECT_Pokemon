@@ -1,3 +1,6 @@
+/* =====================
+   CSS 변수 (라이트 / 다크)
+===================== */
 :root {
   --bg: #ffffff;
   --text: #222;
@@ -12,6 +15,9 @@ body.dark {
   --border: #333;
 }
 
+/* =====================
+   기본 레이아웃
+===================== */
 body {
   margin: 0;
   background: var(--bg);
@@ -31,6 +37,9 @@ header {
   display: flex;
 }
 
+/* =====================
+   지역 목록
+===================== */
 .locations {
   width: 250px;
   border-right: 1px solid var(--border);
@@ -46,7 +55,7 @@ header {
 
 .location-item {
   cursor: pointer;
-  padding: 5px;
+  padding: 6px;
 }
 
 .location-item.active {
@@ -54,6 +63,9 @@ header {
   color: #000;
 }
 
+/* =====================
+   결과 영역
+===================== */
 .results {
   flex: 1;
   padding: 10px;
@@ -64,17 +76,40 @@ header {
   margin-bottom: 10px;
 }
 
+/* =====================
+   포켓몬 행
+===================== */
 .pokemon-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   padding: 6px 4px;
+  cursor: pointer;
 }
 
 .sprite {
   image-rendering: pixelated;
 }
 
+.pokemon-row .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemon-row .name {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.level {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* =====================
+   타입 뱃지
+===================== */
 .type {
   padding: 2px 6px;
   border-radius: 6px;
@@ -84,7 +119,7 @@ header {
 
 /* 타입별 색상 */
 .type-풀     { background: #22c55e; }
-.type-불   { background: #f56a07; }
+.type-불     { background: #f56a07; }
 .type-물     { background: #3b82f6; }
 .type-전기   { background: #facc15; }
 .type-얼음   { background: #38bdf8; }
@@ -100,15 +135,9 @@ header {
 .type-강철   { background: #505358; }
 .type-노말   { background: #9ca3af; }
 
-.level {
-  margin-left: auto;
-  font-size: 12px;
-}
-
-.hidden {
-  display: none;
-}
-
+/* =====================
+   검색 자동완성
+===================== */
 #searchResult {
   list-style: none;
   padding: 0;
@@ -129,13 +158,115 @@ header {
   color: #000;
 }
 
-/* 선택된 타입 버튼 */
+/* =====================
+   타입 필터
+===================== */
 .types button.active {
   outline: 2px solid #000;
   filter: brightness(1.1);
 }
 
-/* 다크모드일 때 */
 body.dark .types button.active {
   outline: 2px solid #fff;
+}
+
+/* =====================
+   공통
+===================== */
+.hidden {
+  display: none;
+}
+
+/* =====================
+   진화 모달
+===================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: var(--panel);
+  color: var(--text);
+  padding: 24px;
+  border-radius: 14px;
+  min-width: 360px;
+  max-width: 700px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  animation: pop 0.2s ease-out;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* =====================
+   진화 트리
+===================== */
+.evo-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 20px 0 0;
+}
+
+.evo-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.evo-pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.evo-pokemon img {
+  width: 72px;
+  image-rendering: pixelated;
+}
+
+.evo-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.evo-condition {
+  font-size: 12px;
+  color: gray;
+  margin-top: 4px;
+}
+
+/* =====================
+   애니메이션
+===================== */
+@keyframes pop {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
