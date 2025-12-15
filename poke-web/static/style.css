@@ -19,26 +19,6 @@ body {
   font-family: sans-serif;
 }
 
-#searchResult {
-  list-style: none;
-  padding: 0;
-  margin: 5px 0 0 0;
-  border: 1px solid var(--border);
-  background: var(--panel);
-  max-height: 200px;
-  overflow-y: auto;
-}
-
-#searchResult li {
-  padding: 6px 10px;
-  cursor: pointer;
-}
-
-#searchResult li:hover {
-  background: #ffcc00;
-  color: #000;
-}
-
 header {
   padding: 10px 20px;
   background: var(--panel);
@@ -74,6 +54,16 @@ header {
   color: #000;
 }
 
+.results {
+  flex: 1;
+  padding: 10px;
+}
+
+.location-image img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
 .pokemon-row {
   display: flex;
   align-items: center;
@@ -85,21 +75,9 @@ header {
   image-rendering: pixelated;
 }
 
-
-.results {
-  flex: 1;
-  padding: 10px;
-}
-
-.location-image img {
-  max-width: 100%;
-  margin-bottom: 10px;
-}
-
 .type {
   padding: 2px 6px;
   border-radius: 6px;
-  margin-left: 5px;
   font-size: 12px;
   background: #ccc;
 }
@@ -123,6 +101,41 @@ header {
 .type-노말   { background: #9ca3af; }
 
 .level {
-  margin-left: 10px;
+  margin-left: auto;
   font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+#searchResult {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#searchResult li {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+#searchResult li:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* 선택된 타입 버튼 */
+.types button.active {
+  outline: 2px solid #000;
+  filter: brightness(1.1);
+}
+
+/* 다크모드일 때 */
+body.dark .types button.active {
+  outline: 2px solid #fff;
 }
