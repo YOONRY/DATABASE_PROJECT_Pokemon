@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="pokemon.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1721"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="Pokemon" custom_title="0" dock_id="2" table="4,7:mainPokemon"/><dock_state state="000000ff00000000fd000000010000000200000827000004fafc0100000002fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000000008270000017500ffffff000008270000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Location" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="28"/><column index="2" value="107"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Pokemon" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="0" mode="0"/></sort><column_widths><column index="1" value="31"/><column index="2" value="87"/><column index="3" value="71"/><column index="4" value="71"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="encounter" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="60"/><column index="2" value="87"/><column index="3" value="82"/><column index="4" value="70"/><column index="5" value="74"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">---- 1. Pokémon 정보
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="pokemon.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1721"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="encounter" custom_title="0" dock_id="2" table="4,9:mainencounter"/><dock_state state="000000ff00000000fd000000010000000200000827000004fafc0100000002fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000000008270000016300ffffff000008270000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Location" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="28"/><column index="2" value="107"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Pokemon" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="0" mode="0"/></sort><column_widths><column index="1" value="31"/><column index="2" value="87"/><column index="3" value="71"/><column index="4" value="71"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="encounter" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="1" mode="1"/></sort><column_widths><column index="1" value="60"/><column index="2" value="87"/><column index="3" value="82"/><column index="4" value="70"/><column index="5" value="74"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">---- 1. Pokémon 정보
 -- CREATE TABLE Pokemon (
 --     Pid INTEGER PRIMARY KEY,
 --     Pname TEXT NOT NULL,
@@ -1412,122 +1412,734 @@
 -- 
 -- -- 킹크랩 Lv 15–25
 -- INSERT INTO encounter VALUES (267, 99, 47, 15, 25);
-</sql><sql name="SQL 7*">-- UPDATE pokemon
--- SET type1 = '풀'
--- WHERE type1 = 'Grass';
--- 
--- UPDATE pokemon
--- SET type2 = '풀'
--- WHERE type2 = 'Grass';
--- 
--- UPDATE pokemon
--- SET type1 = '불'
--- WHERE type1 = 'Fire';
--- 
--- UPDATE pokemon
--- SET type2 = '불'
--- WHERE type2 = 'Fire';
--- 
--- UPDATE pokemon
--- SET type1 = '물'
--- WHERE type1 = 'Water';
--- 
--- UPDATE pokemon
--- SET type2 = '물'
--- WHERE type2 = 'Water';
-
--- UPDATE pokemon
--- SET type1 = '곤충'
--- WHERE type1 = 'Bug';
--- 
--- UPDATE pokemon
--- SET type2 = '곤충'
--- WHERE type2 = 'Bug';
--- 
--- UPDATE pokemon
--- SET type1 = '독'
--- WHERE type1 = 'Poison';
--- 
--- UPDATE pokemon
--- SET type2 = '독'
--- WHERE type2 = 'Poison';
--- 
--- UPDATE pokemon
--- SET type1 = '비행'
--- WHERE type1 = 'Flying';
--- 
--- UPDATE pokemon
--- SET type2 = '비행'
--- WHERE type2 = 'Flying';
-
--- UPDATE pokemon
--- SET type1 = '노말'
--- WHERE type1 = 'Normal';
--- 
--- UPDATE pokemon
--- SET type2 = '노말'
--- WHERE type2 = 'Normal';
--- 
--- UPDATE pokemon
--- SET type1 = '전기'
--- WHERE type1 = 'Electric';
--- 
--- UPDATE pokemon
--- SET type2 = '전기'
--- WHERE type2 = 'Electric';
--- 
--- UPDATE pokemon
--- SET type1 = '땅'
--- WHERE type1 = 'Ground';
--- 
--- UPDATE pokemon
--- SET type2 = '땅'
--- WHERE type2 = 'Ground';
-
--- UPDATE pokemon
--- SET type1 = '에스퍼'
--- WHERE type1 = 'Psychic';
--- 
--- UPDATE pokemon
--- SET type2 = '에스퍼'
--- WHERE type2 = 'Psychic';
--- 
--- UPDATE pokemon
--- SET type1 = '격투'
--- WHERE type1 = 'Fighting';
--- 
--- UPDATE pokemon
--- SET type2 = '격투'
--- WHERE type2 = 'Fighting';
--- 
--- UPDATE pokemon
--- SET type1 = '고스트'
--- WHERE type1 = 'Ghost';
--- 
--- UPDATE pokemon
--- SET type2 = '고스트'
--- WHERE type2 = 'Ghost';
-
--- UPDATE pokemon
--- SET type1 = '바위'
--- WHERE type1 = 'Rock';
--- 
--- UPDATE pokemon
--- SET type2 = '바위'
--- WHERE type2 = 'Rock';
--- 
--- UPDATE pokemon
--- SET type1 = '얼음'
--- WHERE type1 = 'Ice';
--- 
--- UPDATE pokemon
--- SET type2 = '얼음'
--- WHERE type2 = 'Ice';
--- 
--- UPDATE pokemon
--- SET type1 = '드래곤'
--- WHERE type1 = 'Dragon';
--- 
--- UPDATE pokemon
--- SET type2 = '드래곤'
--- WHERE type2 = 'Dragon';</sql><current_tab id="6"/></tab_sql></sqlb_project>
+</sql><sql name="SQL 7">-- UPDATE pokemon
+-- SET type1 = '풀'
+-- WHERE type1 = 'Grass';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '풀'
+-- WHERE type2 = 'Grass';
+-- 
+-- UPDATE pokemon
+-- SET type1 = '불'
+-- WHERE type1 = 'Fire';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '불'
+-- WHERE type2 = 'Fire';
+-- 
+-- UPDATE pokemon
+-- SET type1 = '물'
+-- WHERE type1 = 'Water';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '물'
+-- WHERE type2 = 'Water';
+
+-- UPDATE pokemon
+-- SET type1 = '곤충'
+-- WHERE type1 = 'Bug';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '곤충'
+-- WHERE type2 = 'Bug';
+-- 
+-- UPDATE pokemon
+-- SET type1 = '독'
+-- WHERE type1 = 'Poison';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '독'
+-- WHERE type2 = 'Poison';
+-- 
+-- UPDATE pokemon
+-- SET type1 = '비행'
+-- WHERE type1 = 'Flying';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '비행'
+-- WHERE type2 = 'Flying';
+
+-- UPDATE pokemon
+-- SET type1 = '노말'
+-- WHERE type1 = 'Normal';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '노말'
+-- WHERE type2 = 'Normal';
+-- 
+-- UPDATE pokemon
+-- SET type1 = '전기'
+-- WHERE type1 = 'Electric';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '전기'
+-- WHERE type2 = 'Electric';
+-- 
+-- UPDATE pokemon
+-- SET type1 = '땅'
+-- WHERE type1 = 'Ground';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '땅'
+-- WHERE type2 = 'Ground';
+
+-- UPDATE pokemon
+-- SET type1 = '에스퍼'
+-- WHERE type1 = 'Psychic';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '에스퍼'
+-- WHERE type2 = 'Psychic';
+-- 
+-- UPDATE pokemon
+-- SET type1 = '격투'
+-- WHERE type1 = 'Fighting';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '격투'
+-- WHERE type2 = 'Fighting';
+-- 
+-- UPDATE pokemon
+-- SET type1 = '고스트'
+-- WHERE type1 = 'Ghost';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '고스트'
+-- WHERE type2 = 'Ghost';
+
+-- UPDATE pokemon
+-- SET type1 = '바위'
+-- WHERE type1 = 'Rock';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '바위'
+-- WHERE type2 = 'Rock';
+-- 
+-- UPDATE pokemon
+-- SET type1 = '얼음'
+-- WHERE type1 = 'Ice';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '얼음'
+-- WHERE type2 = 'Ice';
+-- 
+-- UPDATE pokemon
+-- SET type1 = '드래곤'
+-- WHERE type1 = 'Dragon';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '드래곤'
+-- WHERE type2 = 'Dragon';
+
+-- 
+-- UPDATE pokemon
+-- SET type1 = '벌레'
+-- WHERE type1 = '곤충';
+-- 
+-- UPDATE pokemon
+-- SET type2 = '벌레'
+-- WHERE type2 = '곤충';</sql><sql name="SQL 8">-- =========================
+-- 태초마을 (Lid = 1)
+-- Eid 268부터 시작
+-- =========================
+
+-- 잉어킹 Lv5
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (268, 129, 1, 5, 5);
+-- 
+-- -- 발챙이 Lv10
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (269, 60, 1, 10, 10);
+-- 
+-- -- 콘치 Lv10
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (270, 118, 1, 10, 10);
+-- 
+-- -- 발챙이 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (271, 60, 1, 15, 15);
+-- 
+-- -- 왕눈해 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (272, 79, 1, 15, 15);
+
+-- =========================
+-- 상록시티 (Lid = 3)
+-- Eid 273부터
+-- =========================
+
+-- 잉어킹 Lv5
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (273, 129, 3, 5, 5);
+-- 
+-- -- 발챙이 Lv5
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (274, 60, 3, 5, 5);
+-- 
+-- -- 발챙이 Lv10
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (275, 60, 3, 10, 10);
+-- 
+-- -- 발챙이 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (276, 60, 3, 15, 15);
+-- 
+-- -- 콘치 Lv10
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (277, 118, 3, 10, 10);
+-- 
+-- -- 왕눈해 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (278, 79, 3, 15, 15);
+
+-- =========================
+-- 블루시티 (Lid = 10)
+-- Eid 279부터
+-- =========================
+
+-- 잉어킹 Lv5
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (279, 129, 10, 5, 5);
+-- 
+-- -- 발챙이 Lv10
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (280, 60, 10, 10, 10);
+-- 
+-- -- 콘치 Lv10
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (281, 118, 10, 10, 10);
+-- 
+-- -- 고라파덕 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (282, 54, 10, 15, 15);
+-- 
+-- -- 크랩 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (283, 98, 10, 15, 15);
+-- 
+-- -- 콘치 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (284, 118, 10, 15, 15);
+
+-- =========================
+-- 상록숲 (Lid = 5)
+-- Eid 285부터
+-- =========================
+
+-- 캐터피 Lv3~6
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (285, 10, 5, 3, 6);
+-- 
+-- -- 단데기 Lv4~6
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (286, 11, 5, 4, 6);
+-- 
+-- -- 뿔충이 Lv3~5
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (287, 13, 5, 3, 5);
+-- 
+-- -- 딱충이 Lv4~6
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (288, 14, 5, 4, 6);
+-- 
+-- -- 구구 Lv4~8
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (289, 16, 5, 4, 8);
+-- 
+-- -- 피죤 Lv9
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (290, 17, 5, 9, 9);
+-- 
+-- -- 피카츄 Lv3~5
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (291, 25, 5, 3, 5);
+
+-- =========================
+-- 디그다의 굴 (Lid = 24)
+-- Eid 292부터
+-- =========================
+
+-- 디그다 Lv15~22
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (292, 50, 24, 15, 22);
+-- 
+-- -- 닥트리오 Lv29~31
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (293, 51, 24, 29, 31);
+
+-- =========================
+-- 달맞이산 (Lid = 8)
+-- Eid 294부터
+-- =========================
+
+-- 모래두지 Lv12
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (294, 27, 8, 12, 12);
+-- 
+-- -- 삐삐 Lv8~11
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (295, 35, 8, 8, 11);
+-- 
+-- -- 주뱃 Lv6~11
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (296, 41, 8, 6, 11);
+-- 
+-- -- 파라스 Lv8
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (297, 46, 8, 8, 8);
+-- 
+-- -- 꼬마돌 Lv8~10
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (298, 74, 8, 8, 10);
+
+-- =========================
+-- 돌산터널 (Lid = 17)
+-- Eid 299부터
+-- =========================
+
+-- 주뱃 Lv15~21
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (299, 41, 17, 15, 21);
+-- 
+-- -- 꼬마돌 Lv16~20
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (300, 74, 17, 16, 20);
+-- 
+-- -- 알통몬 Lv15~21
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (301, 66, 17, 15, 21);
+-- 
+-- -- 메타몽 Lv18
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (302, 132, 17, 18, 18);
+-- 
+-- -- 롱스톤 Lv13~15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (303, 95, 17, 13, 15);
+
+-- =========================
+-- 무인발전소 (Lid = 20)
+-- Eid 304부터
+-- =========================
+
+-- 찌리리공 Lv21~40
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (304, 100, 20, 21, 40);
+-- 
+-- -- 붐볼 Lv43
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (305, 101, 20, 43, 43);
+-- 
+-- -- 피카츄 Lv20~24
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (306, 25, 20, 20, 24);
+-- 
+-- -- 코일 Lv21~23
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (307, 81, 20, 21, 23);
+-- 
+-- -- 질퍽이 Lv21~23
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (308, 88, 20, 21, 23);
+-- 
+-- -- 레어코일 Lv32~35
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (309, 82, 20, 32, 35);
+-- 
+-- -- 에레브 Lv33~36
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (310, 125, 20, 33, 36);
+-- 
+-- -- 라이츄 Lv33
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (311, 26, 20, 33, 33);
+-- 
+-- -- 질뻐기 Lv32~35
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (312, 89, 20, 32, 35);
+-- 
+-- -- 썬더 Lv50
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (313, 145, 20, 50, 50);
+
+-- =========================
+-- 포켓몬타워 (Lid = 22)
+-- Eid 314부터
+-- =========================
+
+-- 고오스 Lv18~25
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (314, 92, 22, 18, 25);
+-- 
+-- -- 고우스트 Lv20~25
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (315, 93, 22, 20, 25);
+-- 
+-- -- 탕구리 Lv20~22
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (316, 104, 22, 20, 22);
+
+-- =========================
+-- 사파리존 (Lid = 35)
+-- Eid 317부터
+-- =========================
+
+-- 니드런♀ Lv14~36
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (317, 29, 35, 14, 36);
+-- 
+-- -- 니드리나 Lv31
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (318, 30, 35, 31, 31);
+-- 
+-- -- 니드런♂ Lv14~22
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (319, 32, 35, 14, 22);
+-- 
+-- -- 니드리노 Lv31
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (320, 33, 35, 31, 31);
+-- 
+-- -- 파라스 Lv27
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (321, 46, 35, 27, 27);
+-- 
+-- -- 파라섹트 Lv27~32
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (322, 47, 35, 27, 32);
+-- 
+-- -- 곤팡 Lv22
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (323, 48, 35, 22, 22);
+-- 
+-- -- 아라리 Lv24~25
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (324, 102, 35, 24, 25);
+-- 
+-- -- 뿔가노 Lv20~25
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (325, 111, 35, 20, 25);
+-- 
+-- -- 럭키 Lv7~23
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (326, 113, 35, 7, 23);
+-- 
+-- -- 덩쿠리 Lv22
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (327, 114, 35, 22, 22);
+-- 
+-- -- 스라크 Lv23
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (328, 123, 35, 23, 23);
+-- 
+-- -- 쁘사이저 Lv23
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (329, 127, 35, 23, 23);
+-- 
+-- -- 잉어킹 Lv5~10
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (330, 129, 35, 5, 10);
+-- 
+-- -- 발챙이 Lv10
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (331, 60, 35, 10, 10);
+-- 
+-- -- 콘치 Lv10
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (332, 118, 35, 10, 10);
+-- 
+-- -- 고라파덕 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (333, 54, 35, 15, 15);
+-- 
+-- -- 야돈 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (334, 79, 35, 15, 15);
+-- 
+-- -- 크랩 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (335, 98, 35, 15, 15);
+-- 
+-- -- 미뇽 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (336, 147, 35, 15, 15);
+
+-- =========================
+-- 쌍둥이섬 (Lid = 37)
+-- Eid 337부터
+-- =========================
+
+-- 주뱃 Lv36~45
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (337, 41, 37, 36, 45);
+-- 
+-- -- 주뱃 Lv32
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (338, 41, 37, 32, 32);
+-- 
+-- -- 골뱃 Lv27~36
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (339, 42, 37, 27, 36);
+-- 
+-- -- 고라파덕 Lv29~31
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (340, 54, 37, 29, 31);
+-- 
+-- -- 골덕 Lv39
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (341, 55, 37, 39, 39);
+-- 
+-- -- 야돈 Lv29~31
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (342, 79, 37, 29, 31);
+-- 
+-- -- 야도란 Lv39
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (343, 80, 37, 39, 39);
+-- 
+-- -- 쥬쥬 Lv29~31
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (344, 86, 37, 29, 31);
+-- 
+-- -- 쥬쥬 Lv28~32
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (345, 86, 37, 28, 32);
+-- 
+-- -- 쥬레곤 Lv30~34
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (346, 87, 37, 30, 34);
+-- 
+-- -- 셀러 Lv31~33
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (347, 90, 37, 31, 33);
+-- 
+-- -- 크랩 Lv31~33
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (348, 98, 37, 31, 33);
+-- 
+-- -- 크랩 Lv30
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (349, 98, 37, 30, 30);
+-- 
+-- -- 킹크랩 Lv32
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (350, 99, 37, 32, 32);
+-- 
+-- -- 쏘드라 Lv31~33
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (351, 116, 37, 31, 33);
+-- 
+-- -- 쏘드라 Lv29~31
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (352, 116, 37, 29, 31);
+-- 
+-- -- 별가사리 Lv31~33
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (353, 120, 37, 31, 33);
+-- 
+-- -- 루주라 Lv39
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (354, 124, 37, 39, 39);
+-- 
+-- -- =========================
+-- -- 낚시
+-- -- =========================
+-- 
+-- -- 잉어킹 Lv5
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (355, 129, 37, 5, 5);
+-- 
+-- -- 발챙이 Lv10
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (356, 60, 37, 10, 10);
+-- 
+-- -- 콘치 Lv10
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (357, 118, 37, 10, 10);
+-- 
+-- -- 셀러 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (358, 90, 37, 15, 15);
+-- 
+-- -- 크랩 Lv25
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (359, 98, 37, 25, 25);
+-- 
+-- -- 킹크랩 Lv35
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (360, 99, 37, 35, 35);
+-- 
+-- -- 쏘드라 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (361, 116, 37, 15, 15);
+-- 
+-- -- 콘치 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (362, 118, 37, 15, 15);
+-- 
+-- -- 별가사리 Lv15
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (363, 120, 37, 15, 15);
+-- 
+-- -- 별가사리 Lv20~40
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (364, 120, 37, 20, 40);
+-- 
+-- -- =========================
+-- -- 특별 출현
+-- -- =========================
+-- 
+-- -- 프리져 Lv50 (한 마리)
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (365, 144, 37, 50, 50);
+
+-- =========================
+-- 포켓몬 저택 (Lid = 40)
+-- Eid 367부터
+-- =========================
+
+-- 레트라 Lv37,40,43,46
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (367, 20, 40, 37, 46);
+-- 
+-- -- 식스테일 Lv35
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (368, 37, 40, 35, 35);
+-- 
+-- -- 가디 Lv35
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (369, 58, 40, 35, 35);
+-- 
+-- -- 포니타 Lv32~34
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (370, 77, 40, 32, 34);
+-- 
+-- -- 질퍽이 Lv35
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (371, 88, 40, 35, 35);
+-- 
+-- -- 질퍽이 Lv31~33
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (372, 88, 40, 31, 33);
+-- 
+-- -- 질퍽이 Lv35~38
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (373, 88, 40, 35, 38);
+-- 
+-- -- 질뻐기 Lv42
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (374, 89, 40, 42, 42);
+-- 
+-- -- 질뻐기 Lv40
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (375, 89, 40, 40, 40);
+-- 
+-- -- 질뻐기 Lv41
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (376, 89, 40, 41, 41);
+-- 
+-- -- 또가스 Lv31~33
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (377, 109, 40, 31, 33);
+-- 
+-- -- 또가스 Lv35
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (378, 109, 40, 35, 35);
+-- 
+-- -- 또도가스 Lv40~42
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (379, 110, 40, 40, 42);
+-- 
+-- -- 또도가스 Lv42
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (380, 110, 40, 42, 42);
+-- 
+-- -- 마그마 Lv38
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (381, 126, 40, 38, 38);
+-- 
+-- -- 메타몽 Lv12,18,24
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (382, 132, 40, 12, 24);
+
+-- =========================
+-- 챔피언로드 (Lid = 44)
+-- Eid 383부터
+-- =========================
+
+-- 주뱃 Lv26
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (383, 41, 44, 26, 26);
+-- 
+-- -- 주뱃 Lv44
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (384, 41, 44, 44, 44);
+-- 
+-- -- 골뱃 Lv40
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (385, 42, 44, 40, 40);
+-- 
+-- -- 골뱃 Lv39
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (386, 42, 44, 39, 39);
+-- 
+-- -- 알통몬 Lv22
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (387, 66, 44, 22, 22);
+-- 
+-- -- 근육몬 Lv41
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (388, 67, 44, 41, 41);
+-- 
+-- -- 근육몬 Lv39~42
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (389, 67, 44, 39, 42);
+-- 
+-- -- 꼬마돌 Lv24
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (390, 74, 44, 24, 24);
+-- 
+-- -- 꼬마돌 Lv31~41
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (391, 74, 44, 31, 41);
+-- 
+-- -- 데구리 Lv43
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (392, 75, 44, 43, 43);
+-- 
+-- -- 데구리 Lv44
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (393, 75, 44, 44, 44);
+-- 
+-- -- 롱스톤 Lv36~42
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (394, 95, 44, 36, 42);
+-- 
+-- -- 롱스톤 Lv45~47
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (395, 95, 44, 45, 47);
+-- 
+-- -- 탕구리 Lv40
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (396, 104, 44, 40, 40);
+-- 
+-- -- 특별출현: 파이어 Lv50 (한 마리)
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (397, 146, 44, 50, 50);
+
+-- =========================
+-- 블루시티 (Lid = 10)
+-- Eid 398
+-- =========================
+
+-- 뮤츠 Lv70 (특별 출현)
+-- INSERT INTO encounter (Eid, pokemon_id, location_id, min_level, max_level)
+-- VALUES (398, 150, 10, 70, 70);
+</sql><sql name="SQL 9*">-- DELETE FROM encounter
+-- WHERE Eid NOT IN (
+--   SELECT MIN(Eid)
+--   FROM encounter
+--   GROUP BY location_id, pokemon_id
+-- );
+</sql><current_tab id="8"/></tab_sql></sqlb_project>
